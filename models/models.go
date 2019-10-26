@@ -9,7 +9,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
-var db *DB
+var db *gorm.DB
 
 
 type Model struct {

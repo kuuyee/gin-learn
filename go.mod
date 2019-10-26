@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	cloud.google.com/go v0.47.0 // indirect
+	github.com/astaxie/beego v1.12.0
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-ini/ini v1.49.0
 	github.com/jinzhu/gorm v1.9.11
