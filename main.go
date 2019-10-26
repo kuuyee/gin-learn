@@ -1,14 +1,23 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
+"github.com/kuuyee/gin-learn/pkg/setting"
+"github.com/kuuyee/gin-learn/routers"
+"net/http"
+)
 
 func main()  {
-	router := gin.Default()
-	router.GET("/kuuyee", func(c *gin.Context) {
-		c.JSON(200,gin.H{
-			"message":"KuuYee",
-		})
-	})
+	router := routers.InitRouter()
 
-	router.Run()
+	//router.Run()
+	s := &http.Server{
+		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
+		Handler:        router,
+		ReadTimeout:    setting.ReadTimeout,
+		WriteTimeout:   setting.WriteTimeout,
+		MaxHeaderBytes: 1 << 20,
+	}
+
+	s.ListenAndServe()
 }

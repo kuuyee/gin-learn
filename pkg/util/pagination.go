@@ -1,9 +1,9 @@
 package util
 
 import (
-	"github.com/Unknwon/com"
+	"github.com/unknwon/com"
 	"github.com/gin-gonic/gin"
-	"github.com/kuuyee/gomk-b-costprofit/pkg/setting"
+	"github.com/kuuyee/gin-learn/pkg/setting"
 )
 
 func GetPage(c *gin.Context) int {
