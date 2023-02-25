@@ -9,7 +9,7 @@ require (
 	github.com/go-ini/ini v1.49.0
 	github.com/jinzhu/gorm v1.9.11
 	github.com/unknwon/com v1.0.1
-	golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550 // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 	gopkg.in/ini.v1 v1.49.0 // indirect
 )
 
